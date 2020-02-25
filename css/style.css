@@ -1,0 +1,1239 @@
+@import "reset.css";
+@import url("https://use.typekit.net/qtf5aks.css");
+
+/* styling for whole page even inside media queries */
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #C9F8F8;
+}
+
+/* grid that defines layout of sidebar navigation and topbar navigation */
+
+.maingrid {
+  display: grid;
+  grid-template-columns: 120px auto;
+  grid-template-rows: 100px auto;
+  height: 100vh;
+}
+
+/* styling for sidebar navigation */
+
+.navbar {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: inline-block;
+  width: 120px;
+  background-color: #A0E9E9;
+  padding-top: 30px;
+}
+
+/* hiding the mobile navbar when the desktop site is displayed */
+
+#mobinav_bar {
+  display: none;
+}
+
+.mobitopnav {
+  display: none;
+}
+
+.nav {
+  display: block;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav img {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.nav span {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-family: neuzeit-grotesk, sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+}
+
+.current {
+  filter: drop-shadow(0px 7px 4px #73BABA); 
+}
+
+/* styling for top navbar */
+
+.topnav {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: block;
+  width: 100%;
+  height: 120px;
+  font-family: neuzeit-grotesk, sans-serif;
+}
+
+.topnav h1 {
+  display: inline-block;
+  font-size: 60px;
+  font-weight: 900;
+  color: #78AAAA;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.topnav ul {
+  display: inline-flex;
+  margin-left: 40px;
+  position: relative;
+  bottom: 15px;
+}
+
+.topnav li {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.topnav a {
+  text-decoration: none;
+  color: #95D1D1;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+a.topcurrent {
+  color: #235E5E;
+}
+
+/* grid that defines layout of portfolio preview items */
+
+.subgrid {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-row-gap: 5%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  height: auto;
+  justify-content: space-evenly;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+/* styling for portfolio preview items */
+
+.contentpreview {
+  width: 350px;
+  height: 300px;
+  background-color: #EAFCFC;
+  color: #95b9b9;
+  box-shadow: 0px 5px 10px #81b4b4;
+  transition: box-shadow 0.5s;
+}
+
+.contentpreview:hover {
+  background-color: white;
+  color: #021414;
+  box-shadow: 0px 20px 30px #81b4b4;
+}
+
+.thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width:100%;
+  height: 200px;
+}
+
+.thumbnail img {
+  width: 100%;
+}
+
+.contenttext {
+  height: 100px;
+  width: 100%;
+  padding: 10px 15px 10px 15px;
+  font-family: neuzeit-grotesk, sans-serif;
+}
+
+.contenttext h2 {
+  font-family: bebas-neue, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.contenttext p {
+  line-height: normal;
+}
+
+.contenttext a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* styling for bio page items */
+
+.biogrid {
+  display: grid;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: 40% auto;
+  grid-template-rows: 440px auto;
+  padding-top: 10px;
+}
+
+.profilepic {
+  height: 400px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  box-shadow: 0px 5px 10px #81b4b4;
+}
+
+.biointro {
+  display: block;
+  height: 100px;
+  grid-column-start: 2;
+  grid-row-start:1;
+  grid-column-end: 3;
+  font-family: bebas-neue, sans-serif;
+  font-size: 100px;
+  font-weight: 400;
+  font-style: normal;
+  color: #78AAAA;
+  margin-left: 1%;
+  margin-right: auto;
+  position: relative;
+  top: -14px;
+}
+
+.biointro em {
+  font-style: normal;
+  color: #8BE0E0;
+}
+
+.skillbox {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  display: grid;
+  grid-template-rows: 70px auto;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  top: 95px;
+  width: 630px;
+  height: 305px;
+  margin-left: 1%;
+  background-color: #8EE5E5;
+  box-shadow: 0px 5px 10px #81b4b4;
+}
+
+.skillboxheader {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  background-color: #EAFCFC;
+}
+
+.skillboxheader h3{
+  color: #78AAAA;
+  font-family: neuzeit-grotesk;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 26px;
+}
+
+.skills {
+  padding-left: 50px;
+}
+
+.skills, .inspirations {
+  padding-top: 19px;
+}
+
+.inspirations {
+  padding-left: 25px;
+}
+
+.skills h4, .inspirations h4 {
+  font-family: bebas-neue, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  color: #C9F8F8;
+  margin-bottom: 17px;
+}
+
+.brain {
+  display: inline-block;
+  height: 25px;
+  position: relative;
+  top: 8px;
+  margin-right: 15px;
+}
+
+.heart {
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  top: 8px;
+  margin-right: 15px;
+  margin-top: 2px;
+  margin-bottom: 3px;
+}
+
+.skills ul, .inspirations ul {
+  line-height: normal;
+  font-family: museo-sans, sans-serif;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.skills li, .inspirations li {
+  margin-bottom: 18px;
+}
+
+.blurb {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: #EAFCFC;
+  border-radius: 15px;
+  margin-left: 1%;
+  width: 630px;
+  height: fit-content;
+  /* box-shadow: 0px 5px 10px #81b4b4; */
+  padding: 20px 30px 20px 30px;
+
+}
+
+.blurb p {
+  font-family: neuzeit-grotesk, sans-serif;
+  font-size: 18px;
+  color: #73BABA;
+  margin-bottom: 20px;
+  line-height: normal;
+}
+
+.blurb a {
+  text-decoration: none;
+  color: #2c8a8a;
+}
+
+.blurb a:hover {
+  border-bottom: 5px solid rgb(153, 153, 248);
+}
+
+.social-heading {
+  width: 405px;
+  margin: 0px auto 0px auto;
+  border-radius: 20px;
+  background-color: #8EE5E5;
+  height: fit-content;
+  padding: 10px 5px 5px 5px;
+}
+
+.social-heading h3 {
+  font-family: neuzeit-grotesk, sans-serif;
+  font-weight: 900;
+  font-size: 2.5em;
+  margin: 0px 0px 10px 15px;
+  color: #EAFCFC;
+}
+
+.socialbox {
+  font-family: neuzeit-grotesk, sans-serif;
+  font-weight: 600;
+  display: block;
+  width: 100%;
+  height: fit-content;
+  border-radius: 15px;
+  background-color: #EAFCFC;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.social-links li {
+  font-size: 1.5em;
+  height: 50px;
+}
+
+.social-links li:hover {
+  transition: background-color 0.25s ease-in-out;
+  background-color: rgb(234, 234, 255);
+}
+
+.social-links li:hover:first-child {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.social-links li:hover:last-child {
+  border-radius: 0px 0px 15px 15px;
+}
+
+.social-links li:active {
+  transition: all 0s;
+  background-color: #185858;
+}
+
+.social-links li:active a {
+  color: #FFFFFF;
+  transition: all 0s;
+}
+
+.social-links a {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-decoration: none;
+  color: #78AAAA;
+  height: 100%;
+  width: 100%;
+  line-height: 50px;
+  margin: 0px 0px 0px 20px;
+}
+
+.social-links img {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+
+/* styles for contact page*/
+
+.contactwrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.contactbox {
+  display: grid;
+  grid-template-rows: 70px 1fr;
+  grid-template-columns: 100%;
+  background-color: #8EE5E5;
+  width: 811px;
+  height: 530px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  box-shadow: 0px 5px 10px #81b4b4;
+}
+
+.contactboxheader {
+  grid-row-start:1;
+  grid-row-end:2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color:#EAFCFC;
+  height: 70px;
+}
+
+.contactboxheader h2 {
+  color: #78AAAA;
+  font-family: neuzeit-grotesk;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 26px;
+  margin-left: 30px;
+}
+
+label {
+  font-family: museo-sans, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+input, textarea {
+  display: block;
+  font-family: museo-sans, sans-serif;
+  font-weight: 500;
+}
+
+input::placeholder {
+  color: #47abab;
+  font-size: 14px;
+}
+
+textarea::placeholder {
+  color: #47abab;
+  font-size: 14px;
+}
+
+#contactform {
+  margin-top: 30px;
+  position: relative;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 75px 75px 219px;
+}
+
+label {
+  color: #FFFFFF;
+  margin-left: 27px;
+}
+
+#fname, #lname, #mail, #phnum {
+  background-color: #ACF6F6;
+  height: 40px;
+    border: 0px;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 20px;
+    padding: 15px;
+}
+
+label[for=fname]{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#fname {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  height: 40px;
+  border: 0px;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 20px;
+  padding: 15px;
+}
+
+label[for=lname] {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#lname {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+label[for=mail] {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#mail {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+label[for=phnum] {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#phnum {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+label[for=pdesc] {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+#pdesc {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  width: 772px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0px;
+  background-color: #acf6f6;
+  padding: 15px;
+  margin-top: 23px;
+  resize: none;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#sendbutton {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  height: 33px;
+  width: 75px;
+  background-color: #44C2C2;
+  border: 0px;
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-family: neuzeit-grotesk, sans-serif;
+  font-weight: 900;
+  font-size: 15px;
+  margin-left: auto;
+  margin-right: 19px;
+  margin-top: 14px;
+}
+
+table {
+  font-family: neuzeit-grotesk, sans-serif;
+  display: table;
+  width: 350px;
+  text-align: left;
+  background-color: #EAFCFC;
+  color: #44C2C2;
+  border-radius: 10px;
+  padding: 5px;
+  line-height: normal;
+  margin-left: 50px;
+  margin-top: 50px;
+  box-shadow: 0px 10px 20px #a1dddd;
+}
+
+th {
+  height: 30px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-right: 5px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+tr {
+  height: 30px;
+}
+
+td {
+  padding-top: 5px;
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.detailwrapper {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.screenshot {
+  height: 90%;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+/* breaking the .contentpreview grid down to 3 columns at 1680px and below */
+
+@media screen and (max-width: 1680px) {
+
+  .subgrid {
+    grid-template-columns: auto auto auto;
+  }
+
+}
+
+/* changing .biogrid positioning when the browser window isn't wide */
+
+@media screen and (max-width: 1400px) {
+
+  .biogrid {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+}
+
+/* breaking the .contentpreview grid down to 2 columns at 1300px and below */
+
+@media screen and (max-width: 1200px) {
+
+  .subgrid {
+    grid-template-columns: auto auto;
+  }
+
+}
+
+/* breaking the .biogrid on the Bio page down to 1 column at 1190px and below */
+
+@media screen and (max-width: 1190px) {
+
+  .biogrid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    padding-bottom: 150px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .profilepic {
+    width: 500px;
+    height: 500px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .biointro {
+    display: block;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-end: 2;
+    position: static;
+    margin-left: auto;
+    margin-top: 30px;
+    font-size: 79px;
+    height: auto;
+  }
+
+  .skillbox {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+    margin-top: 30px;
+    width: 500px;
+  }
+
+  .blurb {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+  }
+
+
+  .skillboxheader h3 {
+    font-size: 22px;
+  }
+
+  .social-heading {
+    margin-top: 30px;
+    width: 500px;
+  }
+
+}
+
+/* adjusting elements on contact page at 950px and below */
+
+@media screen and (max-width: 950px) {
+
+  .contactwrapper {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 100px;
+  }
+
+  .contactbox {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+  }
+
+  #contactform {
+    display: block;
+  }
+
+  #fname, #lname, #mail, #phnum, #pdesc {
+    position: static;
+    display: block;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  #pdesc {
+    height: 200px;
+  }
+
+  label {
+    margin-left: 6%;
+  }
+
+  #sendbutton {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-bottom: 14px;
+  }
+}
+
+/* breaking the .contentpreview grid down to 1 column at 850px and below */
+
+@media screen and (max-width: 900px) {
+
+  .subgrid {
+    grid-template-columns: auto;
+  }
+
+  .contentpreview {
+    width: 450px;
+    height: 350px;
+  }
+
+  .thumbnail {
+    height: 250px;
+  }
+
+}
+
+/* changing the .topnav styling, .maingrid layout, & .subgrid layout at 690px and below */
+
+@media screen and (max-width: 690px) {
+
+  .maingrid {
+    display: grid;
+    grid-template-columns: 100px auto;
+    height: 100vh;
+  }
+
+  .navbar {
+    padding-top: 15px;
+  }
+
+  .topnav {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: block;
+    width: 100%;
+    height: 110px;
+    font-family: neuzeit-grotesk, sans-serif;
+  }
+
+  .topnav h1 {
+    width: 100%;
+    display: inline-block;
+    font-size: 50px;
+    font-weight: 900;
+    color: #78AAAA;
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+
+  .topnav ul {
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 20px;
+  }
+
+  .topnav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .topnav a {
+    text-decoration: none;
+    color: #95D1D1;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  a.topcurrent {
+    color: #235E5E;
+  }
+
+  .subgrid {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: inline-grid;
+    grid-row-gap: 5%;
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  /* adjustments for bio page elements */
+
+  .profilepic {
+    height: 350px;
+    width: 350px;
+  }
+
+  .biointro {
+    font-size: 55px;
+  }
+
+  .skillbox {
+    display: block;
+    width: 350px;
+    height: auto;
+  }
+
+  .skills, .inspirations {
+    padding-left: 30px;
+  }
+
+  .skillboxheader h3 {
+    margin-left: 19px;
+  }
+
+  .inspirations {
+    padding-bottom: 20px;
+  }
+
+  .blurb {
+    width: 350px;
+  }
+
+
+  .socialbuttons {
+    left: 152px;
+  }
+
+  .social-heading {
+    width: 350px;
+  }
+
+}
+
+@media screen and (max-width: 590px) {
+
+  .contentpreview {
+    width: 350px;
+    height: 300px;
+  }
+
+  .thumbnail {
+    height: 200px;
+  }
+
+  .detailwrapper {
+    padding: 0px;
+    width: 100%;
+  }
+
+  .screenshot {
+    margin-left: 0px;
+    width: 100%;
+    height: auto;
+  }
+
+  .table {
+    position: sticky;
+    position: -webkit-sticky;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #C9F8F8;
+  }
+
+  .topnav {
+    display: none;
+  }
+
+  .maingrid {
+    display: block;
+    height: auto;
+  }
+
+  .subgrid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 20px;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    padding-top: 0px;
+    padding-bottom: 100px;
+    z-index: 1;
+  }
+
+  .contentpreview {
+    width: 330px;
+    height: 310px;
+  }
+
+  .thumbnail img {
+    height: 200px;
+    width: auto;
+  }
+
+/* hiding the desktop nav on the mobile site */
+
+  .nav {
+    display: none;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  /* styling for mobile nav */
+
+  #mobinav_bar {
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    background-color: #A0E9E9;
+    width: 100%;
+    min-height: 74px;
+    padding: 3px 0px 0px 0px;
+    padding-bottom: env(safe-area-inset-bottom);
+    z-index: 2;
+  }
+
+  #mobinav {
+    display: block;
+    width: 279px;
+    height: 68px;
+    font-family: neuzeit-grotesk, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #mobinav li {
+    display: inline-block;
+    width: 70px;
+    height: 68px;
+    padding: 3px 0px 3px 0px;
+  }
+
+  .first {
+    margin-right: 30px;
+  }
+
+  .last {
+    margin-left: 30px;
+  }
+
+  .mobicurrent {
+    background-color: #C6F2F2;
+    border-radius: 9px;
+  }
+
+  .mobicurrent span {
+    color: #185858;
+  }
+
+  #mobinav a {
+    color: #FFFFFF;
+    text-decoration: none;
+
+  }
+
+  #mobinav img {
+    height: 48px;
+    width: 48px;
+    margin-left: 11px;
+    margin-right: 11px;
+  }
+
+  #mobinav span {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* styling for mobile top nav */
+
+  .mobitopnav {
+    display: block;
+    font-family: neuzeit-grotesk, sans-serif;
+    margin-bottom: 10px;
+  }
+
+  .mobitopnav h1 {
+    display: inline-block;
+    font-size: 57px;
+    font-weight: 900;
+    color: #78AAAA;
+    margin-left: 0px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  #mobitopnav_links ul {
+    display: inline-block;
+    height: 30px;
+    width: 100%;
+    margin-left: 0px;
+    font-family: neuzeit-grotesk, sans-serif;
+  }
+
+  #mobitopnav_links li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  #mobitopnav_links a {
+    position: sticky;
+    text-decoration: none;
+    color: #95D1D1;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  #mobitopnav_links a.topcurrent {
+    color: #235E5E;
+  }
+
+  #mobitopnav_links {
+    height: 30px;
+  }
+
+  /* hiding the date on mobile */
+
+  .date {
+    display: none;
+  }
+
+  /* adjustments for bio page elements */
+
+  .biogrid {
+    padding-top: 0px;
+  }
+
+  .profilepic {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px;
+  }
+
+  .skillboxheader {
+    height: 90px;
+  }
+
+  .biointro {
+    font-size: 54px;
+  }
+
+  table {
+    width: 100%;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+
+  .skillbox, .socialbox, .blurb {
+    width: 326px;
+  }
+
+  .socialbuttons {
+    left: 135px;
+  }
+
+  .biointro {
+    font-style: 51px;
+  }
+
+  .social-heading {
+    border-radius: 0px;
+    width: 100%;
+  }
+
+  .socialbox {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+}
+
+@media screen and (max-width: 350px){
+  .contentpreview {
+    width: 272px;
+    height: 276px;
+  }
+
+  .thumbnail {
+    height: 180px;
+  }
+
+  /* adjustments for bio page */
+
+  .biointro {
+    font-size: 44px;
+  }
+
+  .biointro, .skillbox, .socialbox, .blurb {
+    margin-top: 15px;
+  }
+
+  .skillbox, .socialbox, .blurb {
+    width: 278px;
+  }
+
+  .socialbuttons {
+    left: 85px;
+  }
+
+}
