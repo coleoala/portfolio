@@ -1,19 +1,19 @@
 <?php 
 
-  if($_POST["submit"]) {
+  if(isset($_POST["submit"])) {
     
     $to = "colehenson@outlook.com";
     $from = $_POST["email"];
     $sender = $_POST["firstname"] . " " . $_POST["lastname"];
 
-    $subject = "Form E-mail Message";
-    $phonenum = $_POST["phoneNum"];    
+    $subject = "Mail from Potential Client";
+    $phonenum = $_POST["phonenum"];    
     $message = $_POST["projdesc"];
-    $mailBody = "Name: $sender\nEmail: $senderEmail\nPhone Number: $phonenum\n\n$message";
+    $mailBody = "Name: $sender\nEmail: $from\nPhone Number: $phonenum\n\n$message";
 
     mail($to, $subject, $mailBody, "From: $sender <$from>");
 
-    $thankYou="<p>Your message has been sent.</p>";
+    $thankYou = "<p>Your message has been sent.</p>";
   }
 
 ?>
@@ -54,9 +54,9 @@
         <div class="contactboxheader">
           <h2>Drop me a line.</h2>
         </div>
-        <form id="contactform" action="mailto:colehenson@outlook.com">
+        <form id="contactform" action="contact.php" method="post">
 
-          <?php $thankYou ?>
+          <?= isset($thankYou) ? $thankYou : '' ?>
 
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="firstname" placeholder="Johnny" />
@@ -73,7 +73,7 @@
             <label for="pdesc">Project Description</label>
             <textarea id="pdesc" name="projdesc" placeholder="Tell me about what you want to work on together."></textarea>
 
-            <input id="sendbutton" type="submit" value="Send" />
+            <input id="sendbutton" type="submit" name="submit" value="Send" />
 
 
         </form>

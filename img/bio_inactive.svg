@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 272.1 272.1" style="enable-background:new 0 0 272.1 272.1;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#BAEFEF;}
-	.st1{fill:none;stroke:#67B9C9;stroke-width:14;stroke-miterlimit:10;}
-	.st2{fill:none;stroke:#67B9C9;stroke-width:14;stroke-linecap:round;stroke-miterlimit:10;}
-</style>
-<title>bio_inactive</title>
-<path class="st0" d="M192.7,270.4c-37.7,2.4-75.6,2.4-113.3,0c-38.3-2.8-74.8-39.3-77.6-77.6c-2.4-37.7-2.4-75.6,0-113.3
-	C4.6,41.1,41.1,4.6,79.4,1.8c37.7-2.4,75.6-2.4,113.3,0c38.3,2.8,74.8,39.3,77.6,77.6c2.4,37.7,2.4,75.6,0,113.3
-	C267.5,231.1,231.1,267.5,192.7,270.4z"/>
-<circle class="st1" cx="136.1" cy="91.8" r="28.8"/>
-<path class="st2" d="M102.3,205.6c0-37.5,1.2-64.3,33.8-64.3s33.7,26.8,33.8,64.3"/>
-</svg>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285.12 285.12"><defs><style>.cls-1{fill:#baefef;}.cls-2{fill:#67b9c9;}</style></defs><title>bio_inactive</title><path class="cls-1" d="M206.65,285.56q-62.65,2-125.3,0A81.56,81.56,0,0,1,2.44,206.65q-2-62.65,0-125.3A81.56,81.56,0,0,1,81.35,2.44q62.66-2,125.3,0a81.56,81.56,0,0,1,78.91,78.91q2,62.66,0,125.3A81.56,81.56,0,0,1,206.65,285.56Z" transform="translate(-1.44 -1.44)"/><path class="cls-2" d="M144,135.57a35.84,35.84,0,1,1,35.84-35.84A35.88,35.88,0,0,1,144,135.57Zm0-57.68a21.84,21.84,0,1,0,21.84,21.84A21.87,21.87,0,0,0,144,77.89Z" transform="translate(-1.44 -1.44)"/><path class="cls-2" d="M177.78,220.57a7,7,0,0,1-7-7c0-43.67-3.74-57.26-26.78-57.26s-26.74,13.59-26.78,57.26a7,7,0,0,1-7,7h0a7,7,0,0,1-7-7c0-20.05.41-36.36,5.13-48.68,5.83-15.18,17.49-22.56,35.65-22.56s29.82,7.38,35.65,22.56c4.72,12.32,5.11,28.63,5.13,48.68a7,7,0,0,1-7,7Z" transform="translate(-1.44 -1.44)"/></svg>
